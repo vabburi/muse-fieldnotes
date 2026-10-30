@@ -1,0 +1,65 @@
+{
+  "id": "job-001",
+  "title": "No heat upstairs: attic furnace locking out",
+  "trade": "hvac",
+  "callType": "no-heat",
+  "synthetic": true,
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "record",
+      "at": "2026-10-19T08:02:00-05:00",
+      "author": { "role": "office", "name": "Dispatch" },
+      "text": "Job ticket: customer reports the upstairs has had no heat since last night. Thermostat is calling and the fan runs, but no warm air. Upstairs system is the top unit in the attic. Maintenance plan member since 2023."
+    },
+    {
+      "id": "S2",
+      "kind": "photo",
+      "at": "2026-10-19T09:41:00-05:00",
+      "author": { "role": "tech", "name": "Marco Ruiz" },
+      "photo": { "file": "attic.jpg", "width": 2048, "height": 1536 },
+      "caption": "Attic: both systems, upstairs unit on top"
+    },
+    {
+      "id": "S3",
+      "kind": "photo",
+      "at": "2026-10-19T09:43:00-05:00",
+      "author": { "role": "tech", "name": "Marco Ruiz" },
+      "photo": { "file": "nameplate.jpg", "width": 1536, "height": 2048 },
+      "caption": "Upstairs furnace rating plate (serial number redacted)"
+    },
+    {
+      "id": "S4",
+      "kind": "voice",
+      "at": "2026-10-19T09:58:00-05:00",
+      "author": { "role": "tech", "name": "Marco Ruiz" },
+      "text": "Upstairs furnace is lighting, flame holds for three or four seconds then drops out. It tries three times and locks out. Flame sensor rod has a white coating on it. Flame signal was 0.8 microamps before cleaning. Pulled the sensor, cleaned it with emery cloth, put it back, now reading 3.1 microamps and holding. Ran it through two full heat cycles, no lockout."
+    },
+    {
+      "id": "S5",
+      "kind": "text",
+      "at": "2026-10-19T10:05:00-05:00",
+      "author": { "role": "tech", "name": "Marco Ruiz" },
+      "text": "Filter in the upstairs media cabinet was loaded. Swapped it with one of the customer's spare 20x25x4 filters stored in the attic. Customer has 3 spares left."
+    },
+    {
+      "id": "S6",
+      "kind": "record",
+      "at": "2026-10-19T10:08:00-05:00",
+      "author": { "role": "system", "name": "Price book" },
+      "text": "FS-01 Flame sensor replacement, part and labor: $145. Maintenance plan members get 15% off repairs."
+    },
+    {
+      "id": "S7",
+      "kind": "voice",
+      "at": "2026-10-19T10:12:00-05:00",
+      "author": { "role": "tech", "name": "Marco Ruiz" },
+      "text": "I'm recommending we replace the flame sensor at the next maintenance visit instead of waiting. Cleaning fixes it today, but once a sensor fouls like that it usually comes back, and if it fails in January they're without heat upstairs on the coldest night. The part's cheap compared to an emergency call. Customer said to put it on the quote and they'll decide by the spring visit."
+    }
+  ],
+  "expect": {
+    "why": true,
+    "recommendation": "Replace the flame sensor at the next maintenance visit",
+    "mustMention": ["0.8", "3.1", "58SB0A090E211120", "AUG 2020", "$145"]
+  }
+}
