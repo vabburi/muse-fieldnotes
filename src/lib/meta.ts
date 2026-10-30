@@ -26,6 +26,9 @@ export async function metaPost<T>(path: string, body: unknown): Promise<T> {
   return JSON.parse(text) as T;
 }
 
+// Muse Spark's reasoning levels (it always reasons, so there is no "none").
+export type ReasoningEffort = "minimal" | "low" | "medium" | "high" | "xhigh" | "max";
+
 export type ContentPart =
   | { type: "text"; text: string }
   | { type: "image_url"; image_url: { url: string } };
@@ -52,7 +55,7 @@ export async function chatJson<T>(opts: {
   messages: ChatMessage[];
   schemaName: string;
   schema: Record<string, unknown>;
-  reasoningEffort?: "low" | "medium" | "high";
+  reasoningEffort?: ReasoningEffort;
 }): Promise<JsonResult<T>> {
   const started = Date.now();
   const completion = await metaPost<ChatCompletion>("/chat/completions", {
@@ -100,7 +103,7 @@ export async function responsesCreate(opts: {
   instructions: string;
   input: ResponseItem[];
   tools: FunctionTool[];
-  reasoningEffort?: "low" | "medium" | "high";
+  reasoningEffort?: ReasoningEffort;
 }): Promise<ResponsesResult> {
   const started = Date.now();
   const res = await metaPost<Omit<ResponsesResult, "ms">>("/responses", {

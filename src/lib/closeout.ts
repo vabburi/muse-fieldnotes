@@ -3,7 +3,7 @@ import "server-only";
 import { cacheGet, cacheSet, hashKey } from "./cache";
 import { photoDataUrl } from "./fixtures";
 import { describeSource, ground } from "./grounding";
-import { chatJson, type ContentPart } from "./meta";
+import { chatJson, type ContentPart, type ReasoningEffort } from "./meta";
 import { Section, type Box, type Claim, type CloseOut, type FollowUp, type Job, type Source } from "./model";
 import { verifyClaims, type VerifierLog } from "./verifier";
 
@@ -59,10 +59,19 @@ Long codes are easy to misread: count repeated characters carefully. Never guess
 leave out a field you cannot read clearly. Skip anything redacted.`;
 
 // Reads one photo's nameplate, cached by image content, so the slow read happens once:
-// at upload time for real jobs, and on the first run for fixtures.
-export async function readNameplate(job: Job, photo: Extract<Source, { kind: "photo" }>, id: string) {
+// at upload time for real jobs, and on the first run for fixtures. Minimal effort read every
+// field the higher efforts did, 3.5x faster than the default (scripts/eval-nameplates.mjs).
+// Evals can set another effort and repeat a trial.
+const NAMEPLATE_EFFORT: ReasoningEffort = "minimal";
+
+export async function readNameplate(
+  job: Job,
+  photo: Extract<Source, { kind: "photo" }>,
+  id: string,
+  { effort = NAMEPLATE_EFFORT, trial }: { effort?: ReasoningEffort; trial?: number } = {},
+) {
   const url = await photoDataUrl(job.id, photo.photo.file);
-  const key = hashKey(MODEL, NAMEPLATE_PROMPT, url);
+  const key = hashKey(MODEL, NAMEPLATE_PROMPT, url, effort, ...(trial ? [`#${trial}`] : []));
   const cached = await cacheGet<NameplateReading>("nameplates", key);
   const started = Date.now();
   const data =
@@ -71,6 +80,7 @@ export async function readNameplate(job: Job, photo: Extract<Source, { kind: "ph
       await chatJson<NameplateReading>({
         schemaName: "nameplate",
         schema: NAMEPLATE_SCHEMA,
+        reasoningEffort: effort,
         messages: [
           { role: "system", content: NAMEPLATE_PROMPT },
           { role: "user", content: [{ type: "image_url", image_url: { url } }] },

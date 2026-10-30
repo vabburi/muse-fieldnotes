@@ -3,7 +3,7 @@ import "server-only";
 import { cacheGet, cacheSet, hashKey } from "./cache";
 import { photoDataUrl } from "./fixtures";
 import { describeSource } from "./grounding";
-import type { ContentPart } from "./meta";
+import type { ContentPart, ReasoningEffort } from "./meta";
 import type { Claim, FollowUp, Job, Source } from "./model";
 import { providerChain, sparkOpenJson, type ProviderName, type Usage } from "./spark-open";
 
@@ -96,17 +96,27 @@ interface Checked {
   requestId?: string;
 }
 
+// For evals: pin one host, set the reasoning effort (the app uses low), and repeat a trial
+// (each trial is cached on its own, so an interrupted sweep resumes).
+export interface VerifyOptions {
+  only?: ProviderName;
+  effort?: ReasoningEffort;
+  trial?: number;
+}
+
 // One line, on the first host that answers. Cached by host chain, prompt, line and the exact
 // cited content (photos included), so regenerating a note only pays for lines that changed.
-async function verifyOne(job: Job, claim: Claim, byId: Map<string, Source>, only?: ProviderName) {
+async function verifyOne(job: Job, claim: Claim, byId: Map<string, Source>, { only, effort, trial }: VerifyOptions) {
   const parts = await content(job, claim, evidenceFor(claim, byId));
   const chain = providerChain(only).map((p) => `${p.name}:${p.model}`);
-  const key = hashKey(chain.join(","), VERIFY_PROMPT, JSON.stringify(parts));
+  const variant = effort || trial ? [`${effort ?? "low"}#${trial ?? 0}`] : [];
+  const key = hashKey(chain.join(","), VERIFY_PROMPT, JSON.stringify(parts), ...variant);
   const cached = await cacheGet<Checked>("verdicts", key);
   if (cached?.provider) return { ...cached, cached: true };
 
   const result = await sparkOpenJson<Verdict>({
     only,
+    reasoningEffort: effort,
     schemaName: "verdict",
     schema: VERDICT_SCHEMA,
     messages: [
@@ -131,8 +141,8 @@ const STATUS = { supported: "verified", partial: "partial", unsupported: "unsupp
 
 // Verifies every line still marked "draft", in parallel. A line no host could check is marked
 // "unverified" rather than blocking the note. Partial lines raise a follow-up question.
-// `only` pins one host (for comparing hosts in evals).
-export async function verifyClaims(job: Job, claims: Claim[], sources: Source[], only?: ProviderName) {
+export async function verifyClaims(job: Job, claims: Claim[], sources: Source[], opts: VerifyOptions = {}) {
+  const { only } = opts;
   const started = Date.now();
   const byId = new Map(sources.map((s) => [s.id, s]));
   // With no host configured, each line below fails and is marked "unverified".
@@ -156,7 +166,7 @@ export async function verifyClaims(job: Job, claims: Claim[], sources: Source[],
     claims.map(async (claim): Promise<Claim> => {
       if (claim.status !== "draft") return claim;
       try {
-        const result = await verifyOne(job, claim, byId, only);
+        const result = await verifyOne(job, claim, byId, opts);
         const { verdict, usage } = result;
         log.calls++;
         log.providers[result.provider] = (log.providers[result.provider] ?? 0) + 1;

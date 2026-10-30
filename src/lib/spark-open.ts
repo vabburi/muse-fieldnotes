@@ -1,6 +1,6 @@
 import "server-only";
 
-import type { ChatMessage } from "./meta";
+import type { ChatMessage, ReasoningEffort } from "./meta";
 
 // Muse Spark Open (Meta's open weights) on three hosts, all OpenAI-compatible: Baseten first,
 // then Fireworks, then Modal. A host is used only when its key is in .env. Server-only: keys
@@ -87,7 +87,7 @@ interface JsonRequest {
   messages: ChatMessage[];
   schemaName: string;
   schema: Record<string, unknown>;
-  reasoningEffort?: "low" | "medium" | "high";
+  reasoningEffort?: ReasoningEffort;
   maxTokens?: number;
 }
 
@@ -95,13 +95,16 @@ interface JsonRequest {
 // Spark Open reasons before it answers, so the token cap must leave room for that.
 async function callOne<T>(provider: Provider, opts: JsonRequest) {
   const started = Date.now();
+  // Higher effort thinks longer: more room for reasoning tokens and more time (evals only; the
+  // app runs at low).
+  const deep = opts.reasoningEffort && !["minimal", "low"].includes(opts.reasoningEffort);
   const res = await fetch(`${provider.baseUrl}/chat/completions`, {
     method: "POST",
     headers: { Authorization: `Bearer ${provider.key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: provider.model,
       messages: opts.messages,
-      max_tokens: opts.maxTokens ?? 4000,
+      max_tokens: opts.maxTokens ?? (deep ? 16000 : 4000),
       reasoning_effort: opts.reasoningEffort ?? "low",
       response_format: {
         type: "json_schema",
@@ -109,7 +112,7 @@ async function callOne<T>(provider: Provider, opts: JsonRequest) {
       },
     }),
     // Short enough that a stuck host still leaves time for the next one.
-    signal: AbortSignal.timeout(30_000),
+    signal: AbortSignal.timeout(deep ? 180_000 : 30_000),
   });
   const headerId =
     res.headers.get("x-baseten-request-id") ?? res.headers.get("x-request-id") ?? res.headers.get("modal-call-id");

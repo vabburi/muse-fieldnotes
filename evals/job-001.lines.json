@@ -1,6 +1,29 @@
 {
   "job": "job-001",
-  "note": "Lines from a real draft plus seeded bad ones, with the status a correct checker gives each. POST {claims} to /api/jobs/job-001/verify.",
+  "note": "Lines from a real draft plus seeded bad ones, with the status a correct checker gives each. The nameplate reading S9 is the plate in S3 as transcribed by hand, so the suite doesn't depend on a past note. POST {claims, derived} to /api/jobs/job-001/verify.",
+  "derived": [
+    {
+      "id": "S9",
+      "kind": "nameplate",
+      "at": "2026-10-19T09:43:00-05:00",
+      "author": {
+        "role": "system",
+        "name": "Nameplate reading (hand transcription)"
+      },
+      "derivedFrom": "S3",
+      "fields": {
+        "manufacturer": "Carrier Corporation",
+        "product number": "58SB0A090E211120",
+        "model number": "58SB0A090E21--20",
+        "date of manufacture": "AUG 2020",
+        "input BTU/hr": "88,000",
+        "output BTU/hr": "71,000",
+        "voltage/phase": "115 VOLTS / 60 HZ / 1 PHASE",
+        "max unit amps": "13.0",
+        "motor HP": "1"
+      }
+    }
+  ],
   "claims": [
     {
       "section": "Found",
