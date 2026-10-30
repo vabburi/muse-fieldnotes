@@ -1,0 +1,68 @@
+{
+  "id": "job-003",
+  "title": "Two-system house: warm air, likely low on refrigerant",
+  "trade": "hvac",
+  "callType": "no-cool",
+  "synthetic": true,
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "record",
+      "at": "2026-10-27T11:05:00-05:00",
+      "author": { "role": "office", "name": "Dispatch" },
+      "text": "Job ticket: customer reports the house is too warm and one system is blowing warm air. House has two systems, each a gas furnace with an outdoor AC unit. Not a maintenance plan member."
+    },
+    {
+      "id": "S2",
+      "kind": "photo",
+      "at": "2026-10-27T12:10:00-05:00",
+      "author": { "role": "tech", "name": "Vinay Abburi" },
+      "photo": { "file": "condenser-a.jpg", "width": 1536, "height": 2048 },
+      "caption": "Outdoor unit rating plate (serial redacted)"
+    },
+    {
+      "id": "S3",
+      "kind": "photo",
+      "at": "2026-10-27T12:11:00-05:00",
+      "author": { "role": "tech", "name": "Vinay Abburi" },
+      "photo": { "file": "condenser-b.jpg", "width": 1536, "height": 2048 },
+      "caption": "Second outdoor unit rating plate (serial and QR code redacted)"
+    },
+    {
+      "id": "S4",
+      "kind": "photo",
+      "at": "2026-10-27T12:18:00-05:00",
+      "author": { "role": "tech", "name": "Vinay Abburi" },
+      "photo": { "file": "furnace-a.jpg", "width": 1536, "height": 2048 },
+      "caption": "Furnace rating plate (serial redacted)"
+    },
+    {
+      "id": "S5",
+      "kind": "photo",
+      "at": "2026-10-27T12:19:00-05:00",
+      "author": { "role": "tech", "name": "Vinay Abburi" },
+      "photo": { "file": "furnace-b.jpg", "width": 1536, "height": 2048 },
+      "caption": "Second furnace rating plate (serial redacted)"
+    },
+    {
+      "id": "S6",
+      "kind": "voice",
+      "at": "2026-10-27T12:25:00-05:00",
+      "author": { "role": "tech", "name": "Vinay Abburi" },
+      "audio": { "file": "voice-1.m4a", "seconds": 21.2 },
+      "text": "Alright, I'm at a customer site. and looks like there's warm air blowing there's no no heat or it's very hot and it looks like it's low on Freon so probably need to fill it up but first I need to find a leak if that exists somewhere."
+    },
+    {
+      "id": "S7",
+      "kind": "record",
+      "at": "2026-10-27T12:30:00-05:00",
+      "author": { "role": "system", "name": "Price book" },
+      "text": "LEAK-01 Electronic leak search: $249. R410-LB Refrigerant R-410A, per pound: $95. Leak repair quoted after the leak is found."
+    }
+  ],
+  "expect": {
+    "why": false,
+    "mustMention": ["CA16NA048", "YCE30B22SA", "58PHB070", "58PHB110", "MAR 2017", "$249"],
+    "mustAsk": ["which", "leak"]
+  }
+}

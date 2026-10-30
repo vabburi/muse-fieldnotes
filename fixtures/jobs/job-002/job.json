@@ -1,0 +1,57 @@
+{
+  "id": "job-002",
+  "title": "AC blowing warm: outdoor fan not starting",
+  "trade": "hvac",
+  "callType": "no-cool",
+  "synthetic": true,
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "record",
+      "at": "2026-10-21T13:10:00-05:00",
+      "author": { "role": "office", "name": "Dispatch" },
+      "text": "Job ticket: customer reports the AC is blowing warm air since this morning. Indoor fan runs. Single-story house, one system, condenser on the side yard. Not a maintenance plan member."
+    },
+    {
+      "id": "S2",
+      "kind": "voice",
+      "at": "2026-10-21T14:22:00-05:00",
+      "author": { "role": "tech", "name": "Dana Okafor" },
+      "text": "Condenser contactor is pulled in, compressor is humming but the outdoor fan isn't spinning. Gave the fan a push with a stick and it took off. Run capacitor is bulged on top. Swapped the cap from the truck, fan and compressor both start on their own now."
+    },
+    {
+      "id": "S3",
+      "kind": "voice",
+      "at": "2026-10-21T14:35:00-05:00",
+      "author": { "role": "tech", "name": "Dana Okafor" },
+      "text": "Pressures were a little low after it ran fifteen minutes, so I topped it off with 410A. Supply air is 56 degrees now, return is 75, so we've got a 19 degree split."
+    },
+    {
+      "id": "S4",
+      "kind": "record",
+      "at": "2026-10-21T14:40:00-05:00",
+      "author": { "role": "system", "name": "Price book" },
+      "text": "CAP-35/5 Dual run capacitor 35/5 MFD, installed: $185. CAP-45/5 Dual run capacitor 45/5 MFD, installed: $205. R410-LB Refrigerant R-410A, per pound: $95. LEAK-01 Electronic leak search: $249."
+    },
+    {
+      "id": "S5",
+      "kind": "voice",
+      "at": "2026-10-21T14:44:00-05:00",
+      "author": { "role": "tech", "name": "Dana Okafor" },
+      "text": "If it was low on charge there's a leak somewhere. I'd recommend the leak search before next summer instead of just adding refrigerant every year. Customer wants to think about it, send them the price."
+    },
+    {
+      "id": "S6",
+      "kind": "text",
+      "at": "2026-10-21T15:02:00-05:00",
+      "author": { "role": "customer", "name": "Homeowner" },
+      "text": "Thanks, house is cooling down already. Please email me the leak search price."
+    }
+  ],
+  "expect": {
+    "why": true,
+    "recommendation": "Electronic leak search before next summer",
+    "mustMention": ["56", "75", "$249"],
+    "mustAsk": ["capacitor", "pound"]
+  }
+}

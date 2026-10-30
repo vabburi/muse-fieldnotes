@@ -6,3 +6,18 @@ __pycache__/
 .venv/
 .DS_Store
 out/
+.next/
+/coverage
+/build
+*.pem
+npm-debug.log*
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.cache/
+.env*
+
+# Vendor agent skills installed by `vercel integration add`; not part of the app.
+.agents/
+.claude/
+skills-lock.json

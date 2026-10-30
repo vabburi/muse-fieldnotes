@@ -1,0 +1,74 @@
+{
+  "note": "Rating plates in the fixture photos, transcribed by hand. Codes (product and model numbers) must match exactly, ignoring spaces; other values must contain the expected number. Serial numbers are redacted on the plates and left out here.",
+  "plates": [
+    {
+      "job": "job-001",
+      "source": "S3",
+      "fields": {
+        "manufacturer": "Carrier",
+        "product number": "58SB0A090E211120",
+        "model number": "58SB0A090E21--20",
+        "date of manufacture": "AUG 2020",
+        "input BTU/hr": "88000",
+        "output BTU/hr": "71000",
+        "max unit amps": "13.0",
+        "motor HP": "1"
+      }
+    },
+    {
+      "job": "job-003",
+      "source": "S2",
+      "fields": {
+        "product number": "CA16NA04800GBABA",
+        "model number": "CA16NA048-A",
+        "refrigerant": "410A",
+        "factory charge": "13.00",
+        "compressor RLA": "19.9",
+        "compressor LRA": "109.0",
+        "minimum circuit ampacity": "26.1",
+        "max fuse or breaker": "40"
+      }
+    },
+    {
+      "job": "job-003",
+      "source": "S3",
+      "fields": {
+        "model number": "YCE30B22SA",
+        "refrigerant": "410A",
+        "factory charge": "3 LBS 14 OZ",
+        "compressor RLA": "14.1",
+        "compressor LRA": "73.0",
+        "minimum circuit ampacity": "18.4",
+        "max fuse or breaker": "30"
+      }
+    },
+    {
+      "job": "job-003",
+      "source": "S4",
+      "fields": {
+        "manufacturer": "Carrier",
+        "product number": "58PHB070---10116",
+        "model number": "58PHB070-16",
+        "date of manufacture": "MAR 2017",
+        "input BTU/hr": "66000",
+        "output BTU/hr": "54000",
+        "max unit amps": "10.0",
+        "motor HP": "3/4"
+      }
+    },
+    {
+      "job": "job-003",
+      "source": "S5",
+      "fields": {
+        "manufacturer": "Carrier",
+        "product number": "58PHB110---10120",
+        "model number": "58PHB110-20",
+        "date of manufacture": "MAR 2017",
+        "input BTU/hr": "110000",
+        "output BTU/hr": "90000",
+        "max unit amps": "13.4",
+        "motor HP": "1"
+      }
+    }
+  ]
+}

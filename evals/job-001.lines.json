@@ -1,0 +1,239 @@
+{
+  "job": "job-001",
+  "note": "Lines from a real draft plus seeded bad ones, with the status a correct checker gives each. The nameplate reading S9 is the plate in S3 as transcribed by hand, so the suite doesn't depend on a past note. POST {claims, derived} to /api/jobs/job-001/verify.",
+  "derived": [
+    {
+      "id": "S9",
+      "kind": "nameplate",
+      "at": "2026-10-19T09:43:00-05:00",
+      "author": {
+        "role": "system",
+        "name": "Nameplate reading (hand transcription)"
+      },
+      "derivedFrom": "S3",
+      "fields": {
+        "manufacturer": "Carrier Corporation",
+        "product number": "58SB0A090E211120",
+        "model number": "58SB0A090E21--20",
+        "date of manufacture": "AUG 2020",
+        "input BTU/hr": "88,000",
+        "output BTU/hr": "71,000",
+        "voltage/phase": "115 VOLTS / 60 HZ / 1 PHASE",
+        "max unit amps": "13.0",
+        "motor HP": "1"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "section": "Found",
+      "text": "Upstairs has had no heat since last night, thermostat calling and fan runs but no warm air.",
+      "citations": [
+        {
+          "source": "S1"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Found",
+      "text": "Upstairs system is the top unit in the attic.",
+      "citations": [
+        {
+          "source": "S1"
+        },
+        {
+          "source": "S2",
+          "region": {
+            "phrase": "metal box",
+            "box": {
+              "bottom": 760,
+              "left": 580,
+              "right": 1870,
+              "top": 220
+            }
+          }
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Found",
+      "text": "Upstairs furnace lights, flame holds three or four seconds then drops, tries three times and locks out.",
+      "citations": [
+        {
+          "source": "S4"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Found",
+      "text": "Flame sensor rod had white coating, flame signal was 0.8 microamps before cleaning.",
+      "citations": [
+        {
+          "source": "S4"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Found",
+      "text": "Filter in the upstairs media cabinet was loaded.",
+      "citations": [
+        {
+          "source": "S5"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Done",
+      "text": "Pulled sensor, cleaned with emery cloth and reinstalled, now reading 3.1 microamps and holding.",
+      "citations": [
+        {
+          "source": "S4"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Done",
+      "text": "Ran two full heat cycles with no lockout.",
+      "citations": [
+        {
+          "source": "S4"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Parts",
+      "text": "One customer spare 20x25x4 filter from attic used, 3 spares left.",
+      "citations": [
+        {
+          "source": "S5"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Quoted",
+      "text": "FS-01 Flame sensor replacement, part and labor: $145. Maintenance plan members get 15% off repairs.",
+      "citations": [
+        {
+          "source": "S6"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Why",
+      "text": "Once a sensor fouls like that it usually comes back.",
+      "citations": [
+        {
+          "source": "S7"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Why",
+      "text": "If it fails in January they are without heat upstairs, part is cheap compared to emergency call.",
+      "citations": [
+        {
+          "source": "S7"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Follow-up",
+      "text": "Replace flame sensor at next maintenance visit, customer will decide by spring visit.",
+      "citations": [
+        {
+          "source": "S7"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Upstairs: Carrier, 58SB0A090E211120, 58SB0A090E21--20, AUG 2020, 88,000 / 71,000 BTU/HR.",
+      "citations": [
+        {
+          "source": "S9"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Maintenance plan member since 2023.",
+      "citations": [
+        {
+          "source": "S1"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Done",
+      "text": "Replaced the flame sensor with a new one.",
+      "citations": [
+        {
+          "source": "S4"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "says replaced; the sensor was cleaned"
+    },
+    {
+      "section": "Follow-up",
+      "text": "Customer approved the flame sensor replacement today.",
+      "citations": [
+        {
+          "source": "S7"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "says approved; the customer decides by spring"
+    },
+    {
+      "section": "Found",
+      "text": "Upstairs system is the bottom unit in the attic.",
+      "citations": [
+        {
+          "source": "S1"
+        },
+        {
+          "source": "S2"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "says bottom unit; it is the top unit"
+    },
+    {
+      "section": "Found",
+      "text": "Filter in the upstairs media cabinet was loaded and the evaporator coil was dirty.",
+      "citations": [
+        {
+          "source": "S5"
+        }
+      ],
+      "expect": "partial",
+      "seeded": "adds a dirty coil no source mentions"
+    },
+    {
+      "section": "Notes",
+      "text": "Upstairs: Carrier, 58SB0A090E21120, AUG 2020.",
+      "citations": [
+        {
+          "source": "S9"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "drops a 1 from the product number"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "job": "job-003",
+  "note": "Hand-written lines for the two-system job: true ones, and seeded bad ones that pass the code checks (every number is in a cited source) but mix up the two units or claim what no source says. S8 to S11 are the four rating plates, transcribed by hand. POST {claims, derived} to /api/jobs/job-003/verify.",
+  "derived": [
+    {
+      "id": "S8",
+      "kind": "nameplate",
+      "at": "2026-10-27T12:20:00-05:00",
+      "author": {
+        "role": "system",
+        "name": "Nameplate reading (hand transcription)"
+      },
+      "derivedFrom": "S2",
+      "fields": {
+        "product number": "CA16NA04800GBABA",
+        "model number": "CA16NA048-A",
+        "refrigerant": "R410A",
+        "factory charge": "13.00 LBS",
+        "voltage/phase": "208-230 VOLTS AC / 1 PH / 60 HZ",
+        "compressor RLA": "19.9",
+        "compressor LRA": "109.0",
+        "minimum circuit ampacity": "26.1",
+        "max fuse or breaker": "40 A"
+      }
+    },
+    {
+      "id": "S9",
+      "kind": "nameplate",
+      "at": "2026-10-27T12:20:00-05:00",
+      "author": {
+        "role": "system",
+        "name": "Nameplate reading (hand transcription)"
+      },
+      "derivedFrom": "S3",
+      "fields": {
+        "model number": "YCE30B22SA",
+        "refrigerant": "R-410A",
+        "factory charge": "3 lbs 14 oz",
+        "voltage/phase": "208-230 V 1 PH 60 HZ",
+        "compressor RLA": "14.1",
+        "compressor LRA": "73.0",
+        "minimum circuit ampacity": "18.4",
+        "max fuse or breaker": "30"
+      }
+    },
+    {
+      "id": "S10",
+      "kind": "nameplate",
+      "at": "2026-10-27T12:20:00-05:00",
+      "author": {
+        "role": "system",
+        "name": "Nameplate reading (hand transcription)"
+      },
+      "derivedFrom": "S4",
+      "fields": {
+        "manufacturer": "Carrier Corporation",
+        "product number": "58PHB070---10116",
+        "model number": "58PHB070-16",
+        "date of manufacture": "MAR 2017",
+        "input BTU/hr": "66,000",
+        "output BTU/hr": "54,000",
+        "voltage/phase": "115 VOLTS / 60 HZ / 1 PHASE",
+        "max unit amps": "10.0",
+        "motor HP": "3/4"
+      }
+    },
+    {
+      "id": "S11",
+      "kind": "nameplate",
+      "at": "2026-10-27T12:20:00-05:00",
+      "author": {
+        "role": "system",
+        "name": "Nameplate reading (hand transcription)"
+      },
+      "derivedFrom": "S5",
+      "fields": {
+        "manufacturer": "Carrier Corporation",
+        "product number": "58PHB110---10120",
+        "model number": "58PHB110-20",
+        "date of manufacture": "MAR 2017",
+        "input BTU/hr": "110,000",
+        "output BTU/hr": "90,000",
+        "voltage/phase": "115 VOLTS / 60 HZ / 1 PHASE",
+        "max unit amps": "13.4",
+        "motor HP": "1"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "section": "Found",
+      "text": "House has two systems, each a gas furnace with an outdoor AC unit.",
+      "citations": [
+        {
+          "source": "S1"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Found",
+      "text": "Customer reported the house too warm, with one system blowing warm air.",
+      "citations": [
+        {
+          "source": "S1"
+        },
+        {
+          "source": "S6"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Found",
+      "text": "Tech suspects the system is low on refrigerant and wants to find the leak before adding any.",
+      "citations": [
+        {
+          "source": "S6"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Outdoor unit CA16NA048-A, R410A, factory charge 13.00 lbs.",
+      "citations": [
+        {
+          "source": "S8"
+        },
+        {
+          "source": "S2"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Outdoor unit YCE30B22SA, R-410A, factory charge 3 lbs 14 oz.",
+      "citations": [
+        {
+          "source": "S9"
+        },
+        {
+          "source": "S3"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Furnace Carrier 58PHB070-16, made MAR 2017, 66,000 BTU/hr input and 54,000 output.",
+      "citations": [
+        {
+          "source": "S10"
+        },
+        {
+          "source": "S4"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Furnace Carrier 58PHB110-20, 110,000 BTU/hr input and 90,000 output.",
+      "citations": [
+        {
+          "source": "S11"
+        },
+        {
+          "source": "S5"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Outdoor unit CA16NA048-A: minimum circuit ampacity 26.1, max fuse or breaker 40 A.",
+      "citations": [
+        {
+          "source": "S8"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Quoted",
+      "text": "Electronic leak search $249; R-410A refrigerant $95 per pound.",
+      "citations": [
+        {
+          "source": "S7"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Leak repair is quoted after the leak is found.",
+      "citations": [
+        {
+          "source": "S7"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Customer is not a maintenance plan member.",
+      "citations": [
+        {
+          "source": "S1"
+        }
+      ],
+      "expect": "verified"
+    },
+    {
+      "section": "Notes",
+      "text": "Outdoor unit CA16NA048-A: minimum circuit ampacity 40 A, max breaker 26.1.",
+      "citations": [
+        {
+          "source": "S8"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "swaps the two ratings"
+    },
+    {
+      "section": "Notes",
+      "text": "Furnace 58PHB070-16 is rated 110,000 BTU/hr input.",
+      "citations": [
+        {
+          "source": "S10"
+        },
+        {
+          "source": "S11"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "takes the input rating from the other furnace"
+    },
+    {
+      "section": "Notes",
+      "text": "Outdoor unit YCE30B22SA has a factory charge of 13.00 lbs.",
+      "citations": [
+        {
+          "source": "S8"
+        },
+        {
+          "source": "S9"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "takes the charge from the other outdoor unit"
+    },
+    {
+      "section": "Notes",
+      "text": "Outdoor unit YCE30B22SA compressor RLA is 19.9.",
+      "citations": [
+        {
+          "source": "S8"
+        },
+        {
+          "source": "S9"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "takes the RLA from the other outdoor unit"
+    },
+    {
+      "section": "Notes",
+      "text": "Furnace 58PHB070-16 has a 1 HP blower motor.",
+      "citations": [
+        {
+          "source": "S10"
+        },
+        {
+          "source": "S11"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "the plate says 3/4 HP; 1 HP is the other furnace"
+    },
+    {
+      "section": "Done",
+      "text": "Tech found the leak and added refrigerant.",
+      "citations": [
+        {
+          "source": "S6"
+        }
+      ],
+      "expect": "unsupported",
+      "seeded": "nothing was found or added yet"
+    },
+    {
+      "section": "Found",
+      "text": "Tech suspects the upstairs system is low on refrigerant.",
+      "citations": [
+        {
+          "source": "S6"
+        }
+      ],
+      "expect": "partial",
+      "seeded": "no source says which system"
+    },
+    {
+      "section": "Notes",
+      "text": "House has two gas furnaces with outdoor AC units, both installed in 2017.",
+      "citations": [
+        {
+          "source": "S1"
+        },
+        {
+          "source": "S10"
+        },
+        {
+          "source": "S11"
+        }
+      ],
+      "expect": "partial",
+      "seeded": "the plates give the manufacture date, not the install date"
+    }
+  ]
+}

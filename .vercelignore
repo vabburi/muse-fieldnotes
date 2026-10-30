@@ -1,0 +1,8 @@
+# Keep secrets and local state out of the uploaded source.
+.env
+.env.*
+!.env.example
+.cache
+.agents
+.claude
+skills-lock.json

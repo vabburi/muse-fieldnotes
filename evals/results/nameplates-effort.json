@@ -1,0 +1,7168 @@
+{
+  "at": "2026-10-30T17:53:46.483Z",
+  "summary": [
+    {
+      "effort": "default",
+      "reads": 15,
+      "errors": 0,
+      "right": 1,
+      "wrong": 0,
+      "missing": 0,
+      "msPerPlate": 14783
+    },
+    {
+      "effort": "minimal",
+      "reads": 15,
+      "errors": 0,
+      "right": 1,
+      "wrong": 0,
+      "missing": 0,
+      "msPerPlate": 4225.666666666667
+    },
+    {
+      "effort": "low",
+      "reads": 15,
+      "errors": 0,
+      "right": 0.9829059829059829,
+      "wrong": 0.017094017094017096,
+      "missing": 0,
+      "msPerPlate": 6833.4
+    },
+    {
+      "effort": "medium",
+      "reads": 15,
+      "errors": 0,
+      "right": 1,
+      "wrong": 0,
+      "missing": 0,
+      "msPerPlate": 10576.8
+    },
+    {
+      "effort": "high",
+      "reads": 15,
+      "errors": 0,
+      "right": 1,
+      "wrong": 0,
+      "missing": 0,
+      "msPerPlate": 11503.666666666666
+    },
+    {
+      "effort": "xhigh",
+      "reads": 15,
+      "errors": 0,
+      "right": 1,
+      "wrong": 0,
+      "missing": 0,
+      "msPerPlate": 10819.666666666666
+    },
+    {
+      "effort": "max",
+      "reads": 15,
+      "errors": 0,
+      "right": 1,
+      "wrong": 0,
+      "missing": 0,
+      "msPerPlate": 24225
+    }
+  ],
+  "results": [
+    {
+      "effort": "default",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 11299,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 16050,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 17761,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 11202,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 18189,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 14987,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 12409,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 13804,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1 RLA",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0 LRA",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 12406,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 16323,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 14569,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 11624,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 10527,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 13428,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "default",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 27167,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 4491,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 3788,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 3398,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 4374,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 4425,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 3669,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 3153,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 3840,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1 RLA",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0 LRA",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 4865,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 5141,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 4893,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 3320,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 4396,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 4500,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "minimal",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 5132,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 4993,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 7774,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 5942,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 5138,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 8804,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110.000",
+          "result": "wrong"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90.000",
+          "result": "wrong"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 6942,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 6940,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 6378,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 7621,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 4981,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 6177,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 7121,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 5516,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 11179,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "low",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 6995,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 10891,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 9846,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 8242,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 5480,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 15390,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 9288,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 10064,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 9729,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 11547,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 17938,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 8757,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 8450,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 10439,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 8010,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "medium",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 14581,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 11335,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 8530,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 11832,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1 RLA",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0 LRA",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 9819,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 14580,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 13493,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 8623,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 11606,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 8405,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 17800,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 9776,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 9998,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 11227,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1 RLA",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0 LRA",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 10340,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "high",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 15191,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 7470,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 9886,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 7849,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 10164,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 21523,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 14114,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 11265,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 9396,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 10626,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 11356,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 8386,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 8834,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 8490,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1 RLA",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0 LRA",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 9730,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "xhigh",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 13206,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 0,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 20101,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 21911,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 24134,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 12406,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 0,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 39811,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 1,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 17609,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 16431,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 21867,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 46803,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 1,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 42505,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 2,
+      "plate": {
+        "job": "job-001",
+        "source": "S3",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58SB0A090E211120",
+          "model number": "58SB0A090E21--20",
+          "date of manufacture": "AUG 2020",
+          "input BTU/hr": "88000",
+          "output BTU/hr": "71000",
+          "max unit amps": "13.0",
+          "motor HP": "1"
+        }
+      },
+      "ms": 17150,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58SB0A090E211120",
+          "value": "58SB0A090E211120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58SB0A090E21--20",
+          "value": "58SB0A090E21--20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "AUG 2020",
+          "value": "AUG 2020",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "88000",
+          "value": "88,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "71000",
+          "value": "71,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.0",
+          "value": "13.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S2",
+        "fields": {
+          "product number": "CA16NA04800GBABA",
+          "model number": "CA16NA048-A",
+          "refrigerant": "410A",
+          "factory charge": "13.00",
+          "compressor RLA": "19.9",
+          "compressor LRA": "109.0",
+          "minimum circuit ampacity": "26.1",
+          "max fuse or breaker": "40"
+        }
+      },
+      "ms": 21373,
+      "fields": [
+        {
+          "name": "product number",
+          "want": "CA16NA04800GBABA",
+          "value": "CA16NA04800GBABA",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "CA16NA048-A",
+          "value": "CA16NA048-A",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "13.00",
+          "value": "13.00 LBS 5.90 KG",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "19.9",
+          "value": "19.9",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "109.0",
+          "value": "109.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "26.1",
+          "value": "26.1",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "40",
+          "value": "40 A",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S3",
+        "fields": {
+          "model number": "YCE30B22SA",
+          "refrigerant": "410A",
+          "factory charge": "3 LBS 14 OZ",
+          "compressor RLA": "14.1",
+          "compressor LRA": "73.0",
+          "minimum circuit ampacity": "18.4",
+          "max fuse or breaker": "30"
+        }
+      },
+      "ms": 26133,
+      "fields": [
+        {
+          "name": "model number",
+          "want": "YCE30B22SA",
+          "value": "YCE30B22SA",
+          "result": "right"
+        },
+        {
+          "name": "refrigerant",
+          "want": "410A",
+          "value": "R-410A",
+          "result": "right"
+        },
+        {
+          "name": "factory charge",
+          "want": "3 LBS 14 OZ",
+          "value": "3 lbs 14 oz",
+          "result": "right"
+        },
+        {
+          "name": "compressor RLA",
+          "want": "14.1",
+          "value": "14.1",
+          "result": "right"
+        },
+        {
+          "name": "compressor LRA",
+          "want": "73.0",
+          "value": "73.0",
+          "result": "right"
+        },
+        {
+          "name": "minimum circuit ampacity",
+          "want": "18.4",
+          "value": "18.4",
+          "result": "right"
+        },
+        {
+          "name": "max fuse or breaker",
+          "want": "30",
+          "value": "30",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S4",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB070---10116",
+          "model number": "58PHB070-16",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "66000",
+          "output BTU/hr": "54000",
+          "max unit amps": "10.0",
+          "motor HP": "3/4"
+        }
+      },
+      "ms": 17192,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB070---10116",
+          "value": "58PHB070---10116",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB070-16",
+          "value": "58PHB070-16",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "66000",
+          "value": "66,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "54000",
+          "value": "54,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "10.0",
+          "value": "10.0",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "3/4",
+          "value": "3/4",
+          "result": "right"
+        }
+      ]
+    },
+    {
+      "effort": "max",
+      "trial": 2,
+      "plate": {
+        "job": "job-003",
+        "source": "S5",
+        "fields": {
+          "manufacturer": "Carrier",
+          "product number": "58PHB110---10120",
+          "model number": "58PHB110-20",
+          "date of manufacture": "MAR 2017",
+          "input BTU/hr": "110000",
+          "output BTU/hr": "90000",
+          "max unit amps": "13.4",
+          "motor HP": "1"
+        }
+      },
+      "ms": 17949,
+      "fields": [
+        {
+          "name": "manufacturer",
+          "want": "Carrier",
+          "value": "Carrier Corporation",
+          "result": "right"
+        },
+        {
+          "name": "product number",
+          "want": "58PHB110---10120",
+          "value": "58PHB110---10120",
+          "result": "right"
+        },
+        {
+          "name": "model number",
+          "want": "58PHB110-20",
+          "value": "58PHB110-20",
+          "result": "right"
+        },
+        {
+          "name": "date of manufacture",
+          "want": "MAR 2017",
+          "value": "MAR 2017",
+          "result": "right"
+        },
+        {
+          "name": "input BTU/hr",
+          "want": "110000",
+          "value": "110,000",
+          "result": "right"
+        },
+        {
+          "name": "output BTU/hr",
+          "want": "90000",
+          "value": "90,000",
+          "result": "right"
+        },
+        {
+          "name": "max unit amps",
+          "want": "13.4",
+          "value": "13.4",
+          "result": "right"
+        },
+        {
+          "name": "motor HP",
+          "want": "1",
+          "value": "1",
+          "result": "right"
+        }
+      ]
+    }
+  ]
+}
