@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+export const UNLOCKED = "fieldnotes:unlocked";
+
 // The demo passcode prompt: shown only when the server asks for one and this browser
 // hasn't entered it. Reading jobs and notes never needs it; running anything does.
 export function Unlock() {
@@ -32,6 +34,8 @@ export function Unlock() {
       const body = await res.json();
       if (!res.ok) throw new Error(body.error ?? `HTTP ${res.status}`);
       setLocked(false);
+      // Parts of the page that asked before the passcode (the technician's QR) ask again.
+      window.dispatchEvent(new Event(UNLOCKED));
     } catch (err) {
       setError((err as Error).message);
     } finally {

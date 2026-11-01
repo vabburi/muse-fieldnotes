@@ -8,6 +8,7 @@ import { Section, type Claim, type Job, type Source } from "../model";
 import { sparkOpenJson } from "../spark-open";
 import { verifyClaims } from "../verifier";
 import { shopChecklist } from "./checklist";
+import { askedAbout, describeConflict, refrigerantConflict, refrigerants } from "./conflicts";
 import { asCloseOut, type AgentRun, type ChecklistEntry, type CheckResult, type RunStatus } from "./runs";
 
 // The close-out agent's tools. The checks live inside the tools, at fixed points, so the agent
@@ -32,6 +33,17 @@ export interface ToolResult {
 
 export function allSources(ctx: Context): Source[] {
   return [...ctx.job.sources, ...ctx.run.derived];
+}
+
+function askRounds(run: AgentRun): number {
+  return new Set(run.questions.map((q) => q.id.split(".")[0])).size;
+}
+
+// A refrigerant conflict the technician hasn't been asked about yet, while they still can be.
+function unaskedConflict(ctx: Context) {
+  const conflict = refrigerantConflict(allSources(ctx), ctx.run);
+  if (!conflict || askedAbout(conflict, ctx.run) || askRounds(ctx.run) >= MAX_ASK_ROUNDS) return undefined;
+  return conflict;
 }
 
 export function nextSourceId(ctx: Context): string {
@@ -223,11 +235,21 @@ async function setChecklist(ctx: Context, { entries }: { entries: ChecklistEntry
     if (e.status === "found" && e.sources.length === 0) problems.push(`${e.item}: found, but cites no source`);
     if (e.status === "found") {
       const cited = new Set(e.sources.flatMap((s) => (byId.has(s) ? digitTokens(sourceText(byId.get(s)!)) : [])));
-      const missing = digitTokens(e.note).filter((t) => !cited.has(t));
+      // Source ids in the note ("per S3") are not numbers to check.
+      const missing = digitTokens(e.note.replace(/\bS\d+\b/g, "")).filter((t) => !cited.has(t));
       if (missing.length) problems.push(`${e.item}: ${missing.join(", ")} not in the cited sources`);
     }
     if (e.status === "ask" && !e.note.trim().endsWith("?")) problems.push(`${e.item}: ask, but the note is not a question`);
     if (e.status === "not_applicable" && !e.note.trim()) problems.push(`${e.item}: say why it does not apply`);
+  }
+  // The plate and the technician disagree on the refrigerant: ask, naming the plate's.
+  const conflict = unaskedConflict(ctx);
+  const refrigerant = entries.find((e) => e.item === "refrigerant");
+  if (conflict && refrigerant && (refrigerant.status !== "ask" || !refrigerants(refrigerant.note).some((r) => conflict.plate.includes(r)))) {
+    problems.push(
+      `refrigerant: ${describeConflict(conflict)}. Mark it ask, with a question that names ${conflict.plate.join(" or ")}, ` +
+        `e.g. "The plate says ${conflict.plate[0]}: which refrigerant did you add, and how much?"`,
+    );
   }
 
   let by = "code";
@@ -246,7 +268,12 @@ async function setChecklist(ctx: Context, { entries }: { entries: ChecklistEntry
         schema: JUDGE_SCHEMA,
         messages: [
           { role: "system", content: JUDGE_PROMPT },
-          { role: "user", content: `Sources:\n${sources}\n\nChecklist:\n${list}` },
+          {
+            role: "user",
+            content: `Sources:\n${sources}\n\nChecklist:\n${list}${
+              conflict ? `\n\nFound by code: ${describeConflict(conflict)}. Asking the technician about it is correct.` : ""
+            }`,
+          },
         ],
       });
       for (const r of data.results) if (!r.ok) problems.push(`${r.item}: ${r.problem}`);
@@ -290,7 +317,7 @@ async function askTech(
   const { run } = ctx;
   const refuse = (error: string): ToolResult => ({ result: { error }, refused: true });
   if (!run.checklist?.accepted) return refuse("Set an accepted checklist first (set_checklist).");
-  const rounds = new Set(run.questions.map((q) => q.id.split(".")[0])).size;
+  const rounds = askRounds(run);
   if (rounds >= MAX_ASK_ROUNDS) return refuse(`Already asked ${rounds} times. Submit the note with what you have.`);
   if (questions.length === 0 || questions.length > MAX_QUESTIONS) return refuse(`Ask 1 to ${MAX_QUESTIONS} questions.`);
 
@@ -366,6 +393,14 @@ async function submitNote(ctx: Context, { lines }: { lines: SubmittedLine[] }): 
   const { run, job } = ctx;
   if (!run.checklist?.accepted) return { result: { error: "Set an accepted checklist first (set_checklist)." }, refused: true };
   if (lines.length === 0) return { result: { error: "The note has no lines." }, refused: true };
+  const unasked = unaskedConflict(ctx);
+  if (unasked) {
+    // Not counted as a refused note: the technician has to be asked first.
+    return {
+      result: { error: `Ask first: ${describeConflict(unasked)}. Mark refrigerant ask (set_checklist), then ask_tech.` },
+      refused: true,
+    };
+  }
 
   const sources = allSources(ctx);
   const byId = new Map(sources.map((s) => [s.id, s]));
@@ -397,6 +432,24 @@ async function submitNote(ctx: Context, { lines }: { lines: SubmittedLine[] }): 
     if (covering.length === 0) problems.push(`${e.item}: no line covers it`);
     else if (!covering.some((l) => l.citations.some((c) => need.includes(c.source))))
       problems.push(`${e.item}: the lines covering it don't cite ${need.join(" or ")}`);
+  }
+
+  // A conflict still standing after asking goes in the note for the office: a refrigerant line
+  // names both and cites the plate.
+  const conflict = refrigerantConflict(sources, run);
+  if (conflict) {
+    const shown = lines.some(
+      (l) =>
+        l.items.includes("refrigerant") &&
+        l.citations.some((c) => conflict.plateSources.includes(c.source)) &&
+        refrigerants(l.text).some((r) => conflict.plate.includes(r)) &&
+        refrigerants(l.text).some((r) => conflict.said.includes(r)),
+    );
+    if (!shown) {
+      problems.push(
+        `refrigerant: ${describeConflict(conflict)}. A line covering refrigerant must name both and cite ${conflict.plateSources.join(" or ")}.`,
+      );
+    }
   }
 
   // Then each line: the code checks (in ground), and the verifier model for the rest.

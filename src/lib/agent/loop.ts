@@ -29,6 +29,8 @@ Work in this order, calling exactly one tool per turn and never answering in pla
    recorded; the voice note is garbled).
 3. If any entry is ask, ask_tech once with those questions, then wait for the answers.
 4. When answers come back, set_checklist again with what they settled, then submit_note.
+5. If the office rejects the note and asks to confirm something with the technician, mark it ask
+   (set_checklist) and ask_tech; otherwise address the office's notes and submit_note again.
 If a tool refuses your call, fix exactly what its problems say and call it again. After
 ${MAX_REFUSALS} refused notes the office takes over, so get it right.
 
@@ -224,9 +226,12 @@ export async function review(job: Job, run: AgentRun, decision: "approved" | "re
     return run;
   }
   run.noteRefusals = 0;
+  if (run.checklist) run.checklist.refusals = 0;
   run.messages.push({
     role: "user",
-    content: `The office rejected the note: ${notes}\nAddress the notes and submit a revised note (submit_note).`,
+    content:
+      `The office rejected the note: ${notes}\nIf the office wants something confirmed with the technician, mark it ask ` +
+      "(set_checklist) and ask_tech; otherwise address the notes and submit a revised note (submit_note).",
   });
   run.maxTurns = run.turn + 6;
   return drive(job, run);

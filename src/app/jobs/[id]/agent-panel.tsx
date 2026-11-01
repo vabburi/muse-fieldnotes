@@ -7,6 +7,7 @@ import type { AgentRun, Step } from "@/lib/agent/runs";
 import type { Job } from "@/lib/model";
 
 import { Questions } from "./questions";
+import { UNLOCKED } from "./unlock";
 
 type Run = Omit<AgentRun, "messages">;
 
@@ -217,10 +218,15 @@ function TechLink({ runId }: { runId: string }) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    fetch(`/api/runs/${runId}/tech-link`)
-      .then((res) => (res.ok ? res.json() : null))
-      .then(setLink)
-      .catch(() => {});
+    const load = () =>
+      fetch(`/api/runs/${runId}/tech-link`)
+        .then((res) => (res.ok ? res.json() : null))
+        .then(setLink)
+        .catch(() => {});
+    load();
+    // Locked before the passcode is entered; try again once it is.
+    window.addEventListener(UNLOCKED, load);
+    return () => window.removeEventListener(UNLOCKED, load);
   }, [runId]);
 
   if (!link) return null;
