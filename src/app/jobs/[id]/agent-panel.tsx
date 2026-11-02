@@ -270,6 +270,13 @@ function SignOff({ run, busy, onReview }: { run: Run; busy: boolean; onReview: (
       ) : (
         <p>Every line passed the checks. Approve it, or send it back with what to fix.</p>
       )}
+      {run.review?.decision === "rejected" && (
+        // This note is the agent's revision, so a send-back doesn't look ignored.
+        <p className="rounded bg-white/60 p-2 text-violet-900 dark:bg-zinc-900/60 dark:text-violet-200">
+          Revised after you sent it back at {new Date(run.review.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}:{" "}
+          <q>{run.review.notes}</q>
+        </p>
+      )}
       <textarea
         value={notes}
         onChange={(e) => setNotes(e.target.value)}
