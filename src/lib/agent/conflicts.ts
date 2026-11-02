@@ -9,10 +9,13 @@ import type { AgentRun } from "./runs";
 // so this check looks across all of them.
 
 // R-22 and R-32 need the R ("22" alone is too common); the others are distinctive by themselves.
-const REFRIGERANT = /\bR-?\s?(22|32|134A|407C|410A|454B)\b|\b(407C|410A|454B)\b/gi;
+// Transcripts split the letter off ("454 B"), so a space before it is allowed.
+const REFRIGERANT = /\bR-?\s?(22|32|134\s?A|407\s?C|410\s?A|454\s?B)\b|\b(407\s?C|410\s?A|454\s?B)\b/gi;
 
 export function refrigerants(text: string): string[] {
-  return [...new Set([...text.matchAll(REFRIGERANT)].map((m) => `R-${(m[1] ?? m[2]).toUpperCase()}`))];
+  return [
+    ...new Set([...text.matchAll(REFRIGERANT)].map((m) => `R-${(m[1] ?? m[2]).replace(/\s/g, "").toUpperCase()}`)),
+  ];
 }
 
 export interface RefrigerantConflict {
@@ -68,4 +71,54 @@ export function describeConflict(c: RefrigerantConflict): string {
 // Whether the technician has been asked about it: a refrigerant question naming the plate's.
 export function askedAbout(c: RefrigerantConflict, run: AgentRun): boolean {
   return run.questions.some((q) => q.item === "refrigerant" && refrigerants(q.question).some((r) => c.plate.includes(r)));
+}
+
+// A price the technician quoted that isn't in the shop's price book: a discount, a typo or a
+// guess, and the office bills from the note. Dollar amounts anywhere the technician speaks, and
+// bare numbers in answers to a question about a price ("What did you quote?" "283") when the
+// answer has no dollar amount.
+const DOLLARS = /\$\s?(\d[\d,]*(?:\.\d\d)?)|\b(\d[\d,]*(?:\.\d\d)?)\s?(?:dollars|bucks)\b/gi;
+const NUMBER = /\b\d[\d,]*(?:\.\d\d)?\b/g;
+// Not "charge": technicians ask about refrigerant charge far more often than about what they charged.
+const ASKS_PRICE = /\b(price|prices|priced|quote|quoted|cost|costs)\b|\$/i;
+
+const amount = (s: string) => String(Number(s.replace(/,/g, "")));
+
+// Every number in the text, written the way the price book's are compared ("1,249.00" is "1249").
+export function amounts(text: string): string[] {
+  return [...new Set([...text.matchAll(NUMBER)].map((m) => amount(m[0])))];
+}
+
+export function prices(text: string): string[] {
+  return [...new Set([...text.matchAll(DOLLARS)].map((m) => amount(m[1] ?? m[2])))];
+}
+
+export interface PriceConflict {
+  book: string[]; // every price in the price book
+  quoted: string[]; // quoted by the technician, not in the book
+  bookSources: string[];
+  quotedSources: string[];
+}
+
+export function priceConflict(sources: Source[], run: AgentRun): PriceConflict | undefined {
+  const books = sources.filter((s): s is Extract<Source, { kind: "record" }> => s.kind === "record" && s.author.name === "Price book");
+  const book = new Set(books.flatMap((s) => prices(s.text)));
+  if (book.size === 0) return undefined;
+  const priceAnswers = new Set(run.questions.filter((q) => q.answerSource && ASKS_PRICE.test(q.question)).map((q) => q.answerSource));
+  const off = techSays(sources, run).flatMap((t) => {
+    const dollars = prices(t.text);
+    const said = priceAnswers.has(t.id) && dollars.length === 0 ? amounts(t.text) : dollars;
+    return said.filter((p) => !book.has(p)).map((p) => ({ id: t.id, p }));
+  });
+  if (off.length === 0) return undefined;
+  return {
+    book: [...book],
+    quoted: [...new Set(off.map((o) => o.p))],
+    bookSources: books.map((s) => s.id),
+    quotedSources: [...new Set(off.map((o) => o.id))],
+  };
+}
+
+export function describePriceConflict(c: PriceConflict): string {
+  return `the technician (${c.quotedSources.join(", ")}) quoted ${c.quoted.map((p) => `$${p}`).join(", ")}, which is not in the price book (${c.bookSources.join(", ")})`;
 }

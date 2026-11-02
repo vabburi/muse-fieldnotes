@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "check:fixtures": "node scripts/check-fixtures.mts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --conditions=react-server --test tests/*.test.ts"
   },
   "dependencies": {
     "@meta-sam/parser": "^0.1.0",

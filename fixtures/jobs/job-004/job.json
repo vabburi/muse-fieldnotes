@@ -1,0 +1,51 @@
+{
+  "id": "job-004",
+  "title": "Heat pump not keeping up: topped off, but with which refrigerant?",
+  "trade": "hvac",
+  "callType": "no-cool",
+  "synthetic": true,
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "record",
+      "at": "2026-10-30T09:15:00-05:00",
+      "author": { "role": "office", "name": "Dispatch" },
+      "text": "Job ticket: customer reports the heat pump runs all afternoon and the house won't get below 78. System was installed last year. Not a maintenance plan member."
+    },
+    {
+      "id": "S2",
+      "kind": "photo",
+      "at": "2026-10-30T10:02:00-05:00",
+      "author": { "role": "tech", "name": "Sam Reyes" },
+      "photo": { "file": "condenser.jpg", "width": 760, "height": 480 },
+      "caption": "Outdoor unit rating plate (serial and barcode redacted)"
+    },
+    {
+      "id": "S3",
+      "kind": "voice",
+      "at": "2026-10-30T10:20:00-05:00",
+      "author": { "role": "tech", "name": "Sam Reyes" },
+      "text": "Outdoor coil was packed with cottonwood, rinsed it out. Suction was still running low with high superheat after that, so I topped it off with 410A, about two pounds. Supply air 57, return 76."
+    },
+    {
+      "id": "S4",
+      "kind": "record",
+      "at": "2026-10-30T10:30:00-05:00",
+      "author": { "role": "system", "name": "Price book" },
+      "text": "COIL-01 Outdoor coil cleaning: $129. R410-LB Refrigerant R-410A, per pound: $95. R454B-LB Refrigerant R-454B, per pound: $110. LEAK-01 Electronic leak search: $249."
+    },
+    {
+      "id": "S5",
+      "kind": "voice",
+      "at": "2026-10-30T10:34:00-05:00",
+      "author": { "role": "tech", "name": "Sam Reyes" },
+      "text": "A one-year-old system shouldn't be low. I'd do a leak search before it loses more, the install is still under warranty. Customer said go ahead and quote it."
+    }
+  ],
+  "expect": {
+    "why": true,
+    "recommendation": "Electronic leak search",
+    "mustMention": ["R-454B", "57", "76", "$249"],
+    "mustAsk": ["refrigerant"]
+  }
+}

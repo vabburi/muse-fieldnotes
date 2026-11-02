@@ -6,7 +6,8 @@ import type { Claim, Source } from "./model";
 //    appear in the text of a cited source. Photos have no text, so a number taken
 //    from a photo must cite the nameplate source read from it.
 
-const DIGIT_TOKEN = /[A-Za-z0-9$][\w.,$%/-]*\d[\w.,$%/-]*/g;
+// A lone digit counts too: "added 3 lbs" needs a 3 in the cited source.
+const DIGIT_TOKEN = /[A-Za-z0-9$][\w.,$%/-]*\d[\w.,$%/-]*|\d/g;
 
 function normalize(token: string): string {
   return token

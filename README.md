@@ -1,5 +1,7 @@
 # muse-fieldnotes
 
+[![CI](https://github.com/vabburi/muse-fieldnotes/actions/workflows/ci.yml/badge.svg)](https://github.com/vabburi/muse-fieldnotes/actions/workflows/ci.yml)
+
 Close-out notes for HVAC technicians that check themselves. A technician's photos, voice notes and texts from a job become the note the office bills from: every line cites the evidence it rests on, a second model checks every line, and when something is missing or doesn't add up, the agent asks the technician on their phone instead of guessing.
 
 Built for the Meta Global AI Developer Hackathon (startup track, Oct 26 – Nov 4, 2026) on Muse Spark, Muse Spark Open, SAM 3.1 and Muse Voice Transcribe.
@@ -11,13 +13,13 @@ Built for the Meta Global AI Developer Hackathon (startup track, Oct 26 – Nov 
 
 A technician's voice note says "topped off with 410A". Asked for the condenser's make and model, they send a photo of the rating plate, and Muse Spark reads it: an R-454B heat pump. Each line of a note built from those sources would be true to what it cites, so a line-by-line verifier would pass it. A check in code compares the refrigerant across every source and refuses the note. The agent goes back to the technician, naming the plate's refrigerant in the question, and the note the office signs off records what was actually added. Putting R-410A into an R-454B system is a real and costly mistake; the note is where the office should find out.
 
-This happened in a live test on the deployed site with real equipment photos.
+This first happened in a live test on the deployed site with real equipment photos. job-004 reproduces it from the job's own files: the agent reads the plate, asks the technician which refrigerant went in, and the technician answers by voice from their phone.
 
 ## How it works
 
-1. **Sources.** A job is a thread of sources: the dispatch record, photos, voice notes (transcribed by Muse Voice Transcribe), texts and the shop's price book.
+1. **Sources.** A job is a thread of sources: the dispatch record, photos, voice notes (transcribed by Muse Voice Transcribe when the job is set up), texts and the shop's price book.
 2. **The close-out agent.** Muse Spark runs a loop on the Meta Responses API. Each turn it says what it is doing and calls exactly one tool. The checks live inside the tools, so the agent cannot skip them (`src/lib/agent/`).
-3. **The technician answers from their phone.** When the agent has questions, the office page shows a QR code. The technician scans it and answers on a mobile page with no app and no login, by typing or by taking photos. Photos are re-encoded with their metadata stripped. Whoever sends first, the office or the technician, wins.
+3. **The technician answers from their phone.** When the agent has questions, the office page shows a QR code. The technician scans it and answers on a mobile page with no app and no login, by typing, by speaking (the phone records, Muse Voice Transcribe transcribes, and the technician checks the text before sending; a spoken answer is cited as a voice source), or by taking photos. **Hands-free** mode reads each question aloud, listens until the technician stops talking, reads back what it heard and sends when they say "send", so with Ray-Ban Meta glasses paired as the headset the technician never has to take out the phone. Photos are re-encoded with their metadata stripped. Whoever sends first, the office or the technician, wins.
 4. **Every line is checked.** Code checks run first; then Muse Spark Open checks each line against only the sources it cites. Clicking a citation on a photo shows SAM 3.1's highlight of the exact part the line rests on.
 5. **The office signs off.** Approve, or send it back with notes. A sent-back note returns to the agent, which can revise it or ask the technician again.
 
@@ -26,7 +28,7 @@ This happened in a live test on the deployed site with real equipment photos.
 | `read_nameplates` | Reads rating plates and part labels (e.g. a capacitor's MFD) in photos into citable sources | | |
 | `set_checklist` | One entry per item of the shop's checklist for the call type: found (cited), ask, or not applicable | Code: every shop item covered, cited sources exist, numbers appear in them, refrigerant matches the plates. Then Muse Spark Open judges each entry against all sources | Refused with the problems; after 3 refusals accepted, with the problems kept for the office |
 | `ask_tech` | Asks the technician about items marked ask | Item is marked ask, not already asked, at most 4 questions and 2 rounds | The run pauses until the technician answers; answers and photos become sources |
-| `submit_note` | Submits the cited note | Code: every found or answered checklist item is covered by a citing line; numbers in each line appear in its cited sources; a refrigerant conflict is either asked about or stated with the plate cited. Then Muse Spark Open checks each line | Refused with the problems; after 3 refusals escalated to the office |
+| `submit_note` | Submits the cited note | Code: every found or answered checklist item is covered by a citing line; numbers in each line appear in its cited sources; a refrigerant conflict is either asked about or stated with the plate cited; a price the technician quoted that isn't in the price book is stated beside the book's price, citing both. Then Muse Spark Open checks each line | Refused with the problems; after 3 refusals escalated to the office |
 
 The shop's checklist (`src/lib/agent/checklist.ts`) is the ground truth, set by the shop, not the model. A one-pass close-out (no questions) is kept as a fast mode.
 
@@ -37,7 +39,7 @@ The shop's checklist (`src/lib/agent/checklist.ts`) is the ground truth, set by 
 | Muse Spark (`muse-spark-1.3`) | Runs the agent; reads rating plates and part labels | Meta Model API (Responses and Chat Completions) |
 | Muse Spark Open (`muse-spark-open-1026`) | Verifies every line and judges the checklist: a different model on different infrastructure from the one that wrote the note | Baseten, failing over to Fireworks, then Modal |
 | SAM 3.1 | Highlights the cited part of a photo | Meta Model API |
-| Muse Voice Transcribe | Transcribes the technician's voice notes | Meta Model API |
+| Muse Voice Transcribe | Transcribes the technician's spoken answers on the phone page, and the voice notes in a job | Meta Model API |
 
 ## Measured on our own tasks
 
@@ -60,7 +62,7 @@ Rerun with `node scripts/eval-verifier.mjs` and `node scripts/eval-nameplates.mj
 
 ## Data
 
-No real customers, technicians, job numbers or addresses; the job records are invented. job-003's photos are real equipment from our own shop, with serial numbers, barcodes and QR codes redacted and photo metadata stripped, and its voice note is the founder's own voice, used with permission. API keys live in `.env`, which is git-ignored.
+No real customers, technicians, job numbers or addresses; the job records are invented. job-003's and job-004's photos are real equipment from our own shop, with serial numbers, barcodes and QR codes redacted and photo metadata stripped, and job-003's voice note is the founder's own voice, used with permission. API keys live in `.env`, which is git-ignored.
 
 ## Run it locally
 
@@ -70,7 +72,7 @@ cp .env.example .env   # add a Meta Model API key, and at least one Muse Spark O
 npm run dev
 ```
 
-Locally, runs and caches are files under `.cache/`, and no passcode is needed. `npm run typecheck`, `npm run lint` and `npm run check:fixtures` check the code and the fixture jobs.
+Locally, runs and caches are files under `.cache/`, and no passcode is needed. `npm test` runs the code checks the agent can't skip (number grounding, the refrigerant and price conflicts, the shop checklist) without any model calls; `npm run typecheck`, `npm run lint` and `npm run check:fixtures` check the code and the fixture jobs. CI runs all four on every push.
 
 ## Built during the hackathon
 
@@ -79,5 +81,5 @@ Everything in this repo was written during the event. Before kickoff the repo he
 ## Next
 
 - The design-partner shop's real close-out checklist in place of the stand-in.
-- Hands-free capture from Ray-Ban Meta glasses into the job thread.
+- Photos and voice notes captured on Ray-Ban Meta glasses going straight into the job thread (today they reach a job through the phone's photo library).
 - An advisor and homeowner view for recommendations, where every claim shows the real photo behind it.
