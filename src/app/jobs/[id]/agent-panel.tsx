@@ -160,6 +160,7 @@ export function AgentPanel({ job, onNote, onStart }: { job: Job; onNote: () => v
           <Questions
             questions={run.questions}
             photoUrl={`/api/runs/${run.id}/photos`}
+            voiceUrl={`/api/runs/${run.id}/voice`}
             busy={busy}
             onSend={(answers) => post(`/api/runs/${run.id}/answer`, { answers })}
           />

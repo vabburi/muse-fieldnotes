@@ -66,10 +66,17 @@ export function TechAnswers({ token }: { token: string }) {
       {link && (state === "ready" || state === "sending") && link.questions.length > 0 && (
         <>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            The office needs a few details to finish the close-out note. Type an answer or take a photo of the
-            label; leave it empty if you don&apos;t know.
+            The office needs a few details to finish the close-out note. Type or speak an answer, or take a photo
+            of the label; leave it empty if you don&apos;t know.
           </p>
-          <Questions questions={link.questions} photoUrl={`/api/t/${token}/photos`} busy={state === "sending"} onSend={send} />
+          <Questions
+            questions={link.questions}
+            photoUrl={`/api/t/${token}/photos`}
+            voiceUrl={`/api/t/${token}/voice`}
+            busy={state === "sending"}
+            handsFree
+            onSend={send}
+          />
         </>
       )}
       {error && <p className="text-sm text-red-600">{error}</p>}

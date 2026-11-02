@@ -8,7 +8,11 @@ export default async function Home() {
     <main className="mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 py-10">
       <header>
         <h1 className="text-2xl font-semibold">muse-fieldnotes</h1>
-        <p className="text-zinc-600 dark:text-zinc-400">Job close-outs where every line cites its evidence.</p>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          Job close-outs where every line cites its evidence, a second model checks every line, and the agent asks
+          the technician when something is missing or doesn&apos;t add up. job-004 shows the refrigerant check: the
+          technician says R-410A, the rating plate says R-454B.
+        </p>
       </header>
       <ul className="flex flex-col gap-2">
         {jobs.map((job) => (
@@ -23,9 +27,6 @@ export default async function Home() {
           </li>
         ))}
       </ul>
-      <Link href="/dev/segment" className="text-sm text-zinc-500 underline">
-        Dev: try SAM 3.1 on any photo
-      </Link>
     </main>
   );
 }

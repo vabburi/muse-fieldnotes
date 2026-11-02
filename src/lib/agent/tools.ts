@@ -8,7 +8,15 @@ import { Section, type Claim, type Job, type Source } from "../model";
 import { sparkOpenJson } from "../spark-open";
 import { verifyClaims } from "../verifier";
 import { shopChecklist } from "./checklist";
-import { askedAbout, describeConflict, refrigerantConflict, refrigerants } from "./conflicts";
+import {
+  amounts,
+  askedAbout,
+  describeConflict,
+  describePriceConflict,
+  priceConflict,
+  refrigerantConflict,
+  refrigerants,
+} from "./conflicts";
 import { asCloseOut, type AgentRun, type ChecklistEntry, type CheckResult, type RunStatus } from "./runs";
 
 // The close-out agent's tools. The checks live inside the tools, at fixed points, so the agent
@@ -341,11 +349,14 @@ async function askTech(
 export interface Answer {
   id: string;
   answer: string;
+  // The answer is a Muse Voice Transcribe transcript the technician sent as is.
+  spoken?: boolean;
   photos?: { file: string; width: number; height: number }[];
 }
 
-// Each answer becomes sources: a text source for what the technician wrote, a photo source per
-// photo. Returns the summary for the model and the new photos (so it can be shown them).
+// Each answer becomes sources: a text source for what the technician wrote (a voice source when
+// they spoke it), a photo source per photo. Returns the summary for the model and the new
+// photos (so it can be shown them).
 export function recordAnswers(ctx: Context, answers: Answer[]): { summary: string; photos: Source[] } {
   const tech = ctx.job.sources.find((s) => s.author.role === "tech")?.author ?? { role: "tech" as const, name: "Technician" };
   const lines: string[] = [];
@@ -362,7 +373,10 @@ export function recordAnswers(ctx: Context, answers: Answer[]): { summary: strin
     }
     const at = new Date().toISOString();
     if (a) {
-      const source: Source = { id: nextSourceId(ctx), kind: "text", at, author: tech, text: `Answer to "${q.question}": ${a}` };
+      const text = `Answer to "${q.question}": ${a}`;
+      const source: Source = given.spoken
+        ? { id: nextSourceId(ctx), kind: "voice", at, author: tech, text }
+        : { id: nextSourceId(ctx), kind: "text", at, author: tech, text };
       ctx.run.derived.push(source);
       q.answerSource = source.id;
       lines.push(`${q.id} (${q.item}) → ${source.id}: ${source.text}`);
@@ -449,6 +463,29 @@ async function submitNote(ctx: Context, { lines }: { lines: SubmittedLine[] }): 
       problems.push(
         `refrigerant: ${describeConflict(conflict)}. A line covering refrigerant must name both and cite ${conflict.plateSources.join(" or ")}.`,
       );
+    }
+  }
+
+  // A price the technician quoted that isn't in the price book: one line names it beside the
+  // book's price and cites both, so the office sees the difference before it bills.
+  const offBook = priceConflict(sources, run);
+  if (offBook) {
+    for (const price of offBook.quoted) {
+      const shown = lines.some((l) => {
+        const named = new Set(amounts(l.text));
+        return (
+          named.has(price) &&
+          offBook.book.some((p) => named.has(p)) &&
+          l.citations.some((c) => offBook.bookSources.includes(c.source)) &&
+          l.citations.some((c) => offBook.quotedSources.includes(c.source))
+        );
+      });
+      if (!shown) {
+        problems.push(
+          `price: ${describePriceConflict(offBook)}. One line must name $${price} and the price book's price for the same item, ` +
+            `cite ${offBook.quotedSources.join(" or ")} and ${offBook.bookSources.join(" or ")}, and say they differ.`,
+        );
+      }
     }
   }
 

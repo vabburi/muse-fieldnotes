@@ -5,19 +5,27 @@ import { z } from "zod";
 
 import { cacheClaim } from "../cache";
 import { loadJob } from "../fixtures";
+import { transcribe } from "../transcribe";
 import { loadUpload, saveUpload, type Upload } from "../uploads";
 import { answer, failRun } from "./loop";
 import { publicRun, saveRun, type AgentRun } from "./runs";
 
 // The technician's side of a run, shared by the office page (passcode) and the technician's
-// link (its token): add a photo, then send the answers.
+// link (its token): add a photo or a spoken answer, then send the answers.
 
 // Phones resize before sending; this is the platform's request limit with some room.
 const MAX_PHOTO_BYTES = 4_000_000;
+// 16 kHz mono 16-bit WAV is 32 KB a second: about two minutes.
+const MAX_VOICE_BYTES = 4_000_000;
 
 const Body = z.object({
   answers: z
-    .array(z.object({ id: z.string(), answer: z.string().max(500), photos: z.array(z.string()).max(3).default([]) }))
+    .array(z.object({
+        id: z.string(),
+        answer: z.string().max(500),
+        spoken: z.boolean().default(false),
+        photos: z.array(z.string()).max(3).default([]),
+      }))
     .min(1),
 });
 
@@ -36,6 +44,25 @@ export async function takePhoto(run: AgentRun, request: Request): Promise<Respon
     return Response.json(await saveUpload(body));
   } catch {
     return Response.json({ error: "Could not read that photo." }, { status: 400 });
+  }
+}
+
+// A spoken answer (the body is 16 kHz mono WAV, encoded on the phone): Muse Voice Transcribe
+// turns it into text the technician can check before sending.
+export async function takeVoice(run: AgentRun, request: Request): Promise<Response> {
+  if (run.status !== "needs_input") return Response.json({ error: `Run is ${run.status}` }, { status: 409 });
+  if (request.headers.get("content-type") !== "audio/wav") {
+    return Response.json({ error: "Send the recording as audio/wav." }, { status: 415 });
+  }
+  const wav = new Uint8Array(await request.arrayBuffer());
+  if (wav.length <= 44 || wav.length > MAX_VOICE_BYTES) {
+    return Response.json({ error: "Recording is empty or too long." }, { status: 413 });
+  }
+  try {
+    const { text, audioMs } = await transcribe(wav);
+    return Response.json({ text: text.trim(), seconds: audioMs / 1000 });
+  } catch {
+    return Response.json({ error: "Could not transcribe that; try again or type it." }, { status: 502 });
   }
 }
 
