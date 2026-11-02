@@ -15,7 +15,6 @@ npm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 .cache/
-.env*
 
 # Vendor agent skills installed by `vercel integration add`; not part of the app.
 .agents/
