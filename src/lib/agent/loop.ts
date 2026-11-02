@@ -14,6 +14,11 @@ import { definitions, MAX_REFUSALS, recordAnswers, runTool, type Answer, type Co
 // for the technician, the office's sign-off, escalation), or at the turn limit.
 
 export const MAX_TURNS = 14;
+// Turns allowed after the technician answers, and after the office sends the note back: enough
+// for a re-read, the checklist and the note each to be refused twice (and asking again after a
+// send-back) without stopping short of a note.
+const TURNS_AFTER_ANSWERS = 12;
+const TURNS_AFTER_SEND_BACK = 10;
 // Stop a stretch of turns before the platform's time limit (route maxDuration is 300 s).
 const MAX_DRIVE_MS = 240_000;
 
@@ -211,7 +216,7 @@ export async function answer(job: Job, run: AgentRun, answers: Answer[]) {
     content.push({ type: "input_image", image_url: `${PHOTO_REF}${source.photo.file}` });
   }
   run.messages.push({ role: "user", content });
-  run.maxTurns = run.turn + 8;
+  run.maxTurns = run.turn + TURNS_AFTER_ANSWERS;
   return drive(job, run);
 }
 
@@ -233,6 +238,6 @@ export async function review(job: Job, run: AgentRun, decision: "approved" | "re
       `The office rejected the note: ${notes}\nIf the office wants something confirmed with the technician, mark it ask ` +
       "(set_checklist) and ask_tech; otherwise address the notes and submit a revised note (submit_note).",
   });
-  run.maxTurns = run.turn + 6;
+  run.maxTurns = run.turn + TURNS_AFTER_SEND_BACK;
   return drive(job, run);
 }
