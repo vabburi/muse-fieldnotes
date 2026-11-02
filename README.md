@@ -8,7 +8,7 @@ When the technician recommends a repair or replacement, the same evidence follow
 
 ## Ground rules for this repo
 
-- **Synthetic data only.** No real customers, technicians, job numbers or addresses. Every fixture is invented.
+- **No real customer data.** No real customers, technicians, job numbers or addresses; the job records are invented. job-003's photos are real equipment from our own shop, with serial numbers, barcodes and QR codes redacted and photo metadata stripped, and its voice note is the founder's own voice, used with permission.
 - **Nothing from private repos.** Under the event waiver, shared materials are non-confidential, and the organizers get a perpetual license to submissions. Everything here is new work written for this project.
 - **No secrets in git.** API keys go in `.env`, which is git-ignored.
 - **Implementation starts at kickoff (Oct 26).** Until then, this README is the plan.
