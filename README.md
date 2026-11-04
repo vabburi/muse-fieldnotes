@@ -7,7 +7,7 @@ Close-out notes for HVAC technicians that check themselves. A technician's photo
 Built for the Meta Global AI Developer Hackathon (startup track, Oct 26 – Nov 4, 2026) on Muse Spark, Muse Spark Open, SAM 3.1 and Muse Voice Transcribe.
 
 - **Live:** https://muse-fieldnotes.vercel.app (reading jobs and notes is open; running the agent needs the demo passcode)
-- **Demo video:** _link added at submission_
+- **Demo video (3 min):** https://youtu.be/mUVnFK7d18o
 
 ## What it catches
 
@@ -83,3 +83,7 @@ Everything in this repo was written during the event. Before kickoff the repo he
 - The design-partner shop's real close-out checklist in place of the stand-in.
 - Photos and voice notes captured on Ray-Ban Meta glasses going straight into the job thread (today they reach a job through the phone's photo library).
 - An advisor and homeowner view for recommendations, where every claim shows the real photo behind it.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
